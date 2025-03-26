@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build project",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",  // для отладки
+                "main.cpp",
+                "generate_string/generate_string.cpp",
+                "file_insert/file_insert.cpp",
+                "sqlite3_insert/sqlite3_insert.cpp",
+                "-o", "main.exe",  // имя исполняемого файла
+                "-I", "generate_strings",  // путь для заголовочных файлов
+                "-I", "file_insert",      // путь для заголовочных файлов
+                "-I", "sqlite3_insert",   // путь для заголовочных файлов
+                "-I", "C:/Program Files/sqlite3",
+                "-L", "C:/Program Files/sqlite3",
+                "-lsqlite3"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Компиляция и сборка проекта"
+        }
+    ]
+}
