@@ -6,15 +6,23 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",  // для отладки
+                "-g",  
                 "main.cpp",
                 "generate_string/generate_string.cpp",
                 "file_insert/file_insert.cpp",
                 "sqlite3_insert/sqlite3_insert.cpp",
-                "-o", "main.exe",  // имя исполняемого файла
-                "-I", "generate_strings",  // путь для заголовочных файлов
-                "-I", "file_insert",      // путь для заголовочных файлов
-                "-I", "sqlite3_insert",   // путь для заголовочных файлов
+                "file_read/file_read.cpp",
+                "sqlite3_read/sqlite3_read.cpp",
+                "file_select/file_select.cpp",
+                "sqlite3_select/sqlite3_select.cpp",
+                "-o", "main.exe",  
+                "-I", "generate_strings", 
+                "-I", "file_insert",      
+                "-I", "sqlite3_insert",   
+                "-I", "file_read",
+                "-I", "sqlite3_read",
+                "-I", "file_select",
+                "-I", "sqlite3_select",
                 "-I", "C:/Program Files/sqlite3",
                 "-L", "C:/Program Files/sqlite3",
                 "-lsqlite3"
@@ -24,7 +32,7 @@
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "detail": "Компиляция и сборка проекта"
+            "detail": "Compilation and building project"
         }
     ]
 }
