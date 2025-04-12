@@ -25,7 +25,8 @@
                 "-I", "sqlite3_select",
                 "-I", "C:/Program Files/sqlite3",
                 "-L", "C:/Program Files/sqlite3",
-                "-lsqlite3"
+                "-lsqlite3",
+                "-O0"
             ],
             "group": {
                 "kind": "build",
